@@ -78,7 +78,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
       	<li><a href="../rent.php">|English|</a></li>
-     	<li><a href="index.html">Inicio</a></li>
+     	<li><a href="index.php">Inicio</a></li>
      	<li class="active"><a href="rent.php">Renta<span class="sr-only">(current)</span></a></li>
         <li><a href="iview.html">IView</a></li>
         <li><a href="creditcard.html">Crédito</a></li>

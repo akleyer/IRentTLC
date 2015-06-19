@@ -57,8 +57,8 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-      	<li><a href="/es/index.html">|Espanol|</a></li>
-     	<li><a href="index.html">Home</a></li>
+      	<li><a href="../faq.php">|English|</a></li>
+     	<li><a href="index.php">Home</a></li>
      	<li><a href="rent.php">Rent a Car</a></li>
         <li><a href="iview.html">IView</a></li>
         <li><a href="creditcard.html">Credit Cards</a></li>
