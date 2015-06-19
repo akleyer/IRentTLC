@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="description" content="Welcome to IRentTLC. The place where drivers matter. Rent Luxary. Drive Comfortably. Earn More.">
+    <meta name="description" content="Contact us about any questions regarding renting TLC vehicles.">
     <meta name="keywords" content="IRentTLC, Rent, TLC, Luxary, Uber, Drive, Taxi">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,6 +21,12 @@
     <![endif]-->
     
     <style type="text/css">
+    	
+    	@media (max-width:770px){
+    		#contact-info{
+    			margin-bottom:30px;
+    		}
+    	}
     	
     	@media (max-width:600px){
     		.footer{
@@ -50,14 +56,14 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-     	<li><a href="index.html">Home<span class="sr-only">(current)</span></a></li>
+      	<li><a href="/es/index.html">|Espanol|</a></li>
+     	<li><a href="index.html">Home</a></li>
      	<li><a href="rent.php">Rent a Car</a></li>
         <li><a href="iview.html">IView</a></li>
         <li><a href="creditcard.html">Credit Cards</a></li>
-        <li class="active"><a href="contact.php">Contact Us</a></li>
+        <li class="active"><a href="contact.php">Contact Us<span class="sr-only">(current)</span></a></li>
         <li><a href="blog.html">Blog</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="/es/contact.php"><small>Es</small></a></li>
+        <li><a href="faq.php">FAQ</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -75,11 +81,8 @@
 					<div class="col-sm-4" id="contact-info">
 						<address>
 							<strong>Contact List:</strong><br><br>
-							<strong>Email: </strong><a href="mailto:#"> IRentTLC@gmail.com</a><br>
-							<strong>Stephen Diemer</strong> - 917.803.4537<br>
-							<strong>Rui Barros</strong> - 347.723.6889<br>
-							<strong>David Morfe</strong> - 201.274.5680<br>
-							<strong>Zachary Diemer</strong> - 646.753.0930
+							<strong>Email: </strong><a href="mailto:IRentTLC@gmail.com"> IRentTLC@gmail.com</a><br>
+							<strong>Phone: </strong>718-770-7988
 						</address>
 						<a class="btn btn-social-icon btn-twitter">
     					<i class="fa fa-twitter"></i>

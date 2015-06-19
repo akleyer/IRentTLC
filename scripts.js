@@ -88,6 +88,8 @@ $(document).ready(function() {
 
 $('document').ready(function () {
 
+	
+
 	$("[model]").click(function(e){
 		$("#selectedModel").val($(e.currentTarget).attr("model"));
 	});

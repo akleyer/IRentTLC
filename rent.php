@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="description" content="Welcome to IRentTLC. The place where drivers matter. Rent Luxary. Drive Comfortably. Earn More.">
+    <meta name="description" content="Rent a TLC vehicle today with IRentTLC!">
     <meta name="keywords" content="IRentTLC, Rent, TLC, Luxary, Uber, Drive, Taxi">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -77,14 +77,14 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-     	<li><a href="index.html">Home<span class="sr-only">(current)</span></a></li>
-     	<li class="active"><a href="rent.php">Rent a Car</a></li>
+      	<li><a href="/es/index.html">|Espanol|</a></li>
+     	<li><a href="index.html">Home</a></li>
+     	<li class="active"><a href="rent.php">Rent a Car<span class="sr-only">(current)</span></a></li>
         <li><a href="iview.html">IView</a></li>
         <li><a href="creditcard.html">Credit Cards</a></li>
         <li><a href="contact.php">Contact Us</a></li>
         <li><a href="blog.html">Blog</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="/es/rent.php"><small>Es</small></a></li>
+        <li><a href="faq.php">FAQ</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -98,7 +98,7 @@
         </div>  
 </div> 
  	
-<div class="container">
+<div class="container slideshow">
     <div id="main_area">
         <!-- Slider -->
         <div class="row">
@@ -206,7 +206,7 @@
     </div>
 </div>
 
-<div class="jumbotron other-color" style="margin-top:30px;margin-bottom:50px">
+<div class="jumbotron other-color">
 
 <div class="container text-center" id="inquire">
         <div class="row">
@@ -533,7 +533,7 @@
         </div>
         </div>
         <div class="col-md-2">
-        	<input class="form-control" type="text" placeholder="Select Car Left" id="selectedModel" disabled/>
+        	<input class="form-control" type="text" placeholder="Select Car Left" id="selectedModel" name="model" disabled/>
         </div>
 		</div>
 	</div>
@@ -555,11 +555,11 @@
 				</div>
 				<div class="col-md-4">
 					<label class="radio-inline" style="color:white"><input id="certifiedyes" name="optradio" type="radio"/>Yes</label>
-					<label class="radio-inline" style="color:white"><input id="associatedno" name="optradio" type="radio"/>No</label>
+					<label class="radio-inline" style="color:white"><input id="certifiedno" name="optradio" type="radio"/>No</label>
 				</div>
 			</div>
 			<div class="col-md-5">
-				<input class="form-control" id="name" name="name" placeholder="If Yes, please enter your NYC TLC Number" type="text"/>
+				<input class="form-control" id="tlcNum" name="name" placeholder="If Yes, please enter your NYC TLC Number" type="text"/>
 			</div>
 		</div>
 	</div>
@@ -570,12 +570,12 @@
 					<label style="color:white">Are you associated to Taxi/Livery Base?<label>
 				</div>
 				<div class="col-md-4">
-					<label class="radio-inline" style="color:white"><input id="associatedyes1" name="optradio1" type="radio"/>Yes</label>
-					<label class="radio-inline" style="color:white"><input id="associatedno1" name="optradio1" type="radio"/>No</label>
+					<label class="radio-inline" style="color:white"><input id="associatedyes" name="optradio1" type="radio"/>Yes</label>
+					<label class="radio-inline" style="color:white"><input id="associatedno" name="optradio1" type="radio"/>No</label>
 				</div>
 			</div>
 			<div class="col-md-5">
-				<input class="form-control" id="name" name="name" placeholder="If Yes, please enter your NYC TLC Number" type="text"/>
+				<input class="form-control" id="company" name="name" placeholder="If Yes, please enter the company" type="text"/>
 			</div>
 		</div>
 	</div>
@@ -588,6 +588,43 @@
 	</div>
 </div>
 </form>
+
+    <?php 
+$link = mysqli_connect('localhost', 'cl53-irenttlc', 'jsFdq^4kh', 'cl53-irenttlc');
+if (mysqli_connect_error()) {
+	
+	die('Could not connect to the database');
+
+}
+$name = $_POST['name'];
+$model = $_POST['selectedModel'];
+$email = $_POST['email'];
+$phone = $_POST['phone'];
+$a_yes = $_POST['associatedyes'];
+$a_no = $_POST['associatedno'];
+$c_yes = $_POST['certifiedyes'];
+$c_no = $_POST['certifiedno'];
+$tlc = $_POST['tlcNum'];
+$company = $_POST['company'];
+
+if(isset($a_yes))
+	$associated = 1;
+	else if(isset($a_no))
+		$associated = 0;
+if(isset($c_yes))
+	$certified = 1;
+	else if(isset($c_no))
+		$certified = 0;
+	
+if(isset($_POST['submit'])){
+    $query = "INSERT INTO `Inquiry` (`Name`, `Vehicle`, `Email`, `Phone`, `Certified`, `Tlcnum`, `Association`, `Company`) VALUES ('".$name."', '".$model."', '".$email."','".$phone."' , '".$certified."', '".$tlc."', '".$associated."', '".$company."')";
+    $result = mysqli_query($link, $query);
+    if($result)
+		echo "Thank you!";
+	else 
+   		echo "Error: " . $query . "<br>" . mysqli_error($link);
+	}
+?>
 
 
 </div>

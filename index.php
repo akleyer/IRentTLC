@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="description" content="Welcome to IRentTLC. The place where drivers matter. Rent Luxary. Drive Comfortably. Earn More.">
+    <meta name="description" content="Welcome to IRentTLC. Start driving a TLC vehicle today!">
     <meta name="keywords" content="IRentTLC, Rent, TLC, Luxary, Uber, Drive, Taxi">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,8 +10,9 @@
     <title>IRentTLC - Home</title>
 	<link rel="shortcut icon" href="caricon.ico" />
     <!-- Bootstrap -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css" rel="stylesheet" media="screen">    
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -271,37 +272,39 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">IRENT TLC</a>
+      <ul class="nav navbar-nav navbar-left">
+      	<li><a class="navbar-brand" href="index.html">IRent TLC</a></li>
+      </ul>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-      	<li><a href="../index.html">|English|</a></li>
-     	<li class="active"><a href="index.html">Inicio<span class="sr-only">(current)</span></a></li>
-     	<li><a href="rent.php">Renta</a></li>
+      	<li><a href="/es/index.html">|Espanol|</a></li>
+     	<li class="active"><a href="index.html">Home<span class="sr-only">(current)</span></a></li>
+     	<li><a href="rent.php">Rent a Car</a></li>
         <li><a href="iview.html">IView</a></li>
-        <li><a href="creditcard.html">Crédito</a></li>
-        <li><a href="contact.php">Contáctenos</a></li>
+        <li><a href="creditcard.html">Credit Cards</a></li>
+        <li><a href="contact.php">Contact Us</a></li>
         <li><a href="blog.html">Blog</a></li>
-        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="faq.php">FAQ</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
 
-   <!--Slideshow-->	
+    <!--Slideshow-->	
 	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <img src="../Pictures/hdpic9.jpg" alt="New York City" class="img-responsive" />
+      <img src="Pictures/hdpic9.jpg" alt="New York City" class="img-responsive" />
       <div class="carousel-caption">
         <div class="col-lg-12">
-       		<h1 class="page-header">Bienvenido a IRentTLC <br/> El lugar donde la materia del conductor</h1><br/>
-        	<h2 id="subcaption">Renta Luxary. Conducir cómodamente. Ganar Mas.</h2>
-        	<a class="btn btn-success" href="rent.html">Rent Now!</a>
+       		<h1 class="page-header">Welcome to IRentTLC <br/> The Place Where Driver's Matter</h1><br/>
+        	<h2 id="subcaption">Rent Luxary. Drive Comfortably. Earn More.</h2>
+        	<a class="btn btn-success" href="rent.php">Rent Now!</a>
         </div>
       </div>
     </div>
@@ -312,22 +315,22 @@
   	<div class="container text-center" id="offer">
         <div class="row">
     	    <div class="col-lg-12">
-                <h1 class="page-header" style="color:grey;">Nuestros servicios</h1>
+                <h1 class="page-header" style="color:grey;">Services We Provide</h1>
             </div>
         </div>  
     </div> 
 	</div>
      
-      	 <div class="container" id="panelcrap">
+     <div class="container" id="panelcrap">
       	<div class="row">
       		<div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8">
 				<div class="panel panel-default panel-horizontal">
     				<div class="panel-heading">
-        				<h3 class="panel-title">Alquiler de Elección</h3>
+        				<h3 class="panel-title">Rental of Choice</h3>
     				</div>
-    				<div class="panel-body">En IRent, creemos que usted se merece tener un
-    				 lujoso, acogedor, y el vehículo presentable que atraer a sus clientes
-    				  con una experiencia de inmersión y cómodo.
+    				<div class="panel-body">At IRent, we believe that you deserve to have 
+    				a luxiourious, inviting, and presentable vehicle that will entice your
+    				 clients with an immesive and comfortable experience.
     				</div>
     				<div class="panel-footer text-center"><a href="rent.html"><span class="glyphicon glyphicon-road"></a>
     				</div>
@@ -338,14 +341,13 @@
       		<div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8">
 				<div class="panel panel-default panel-horizontal">
     				<div class="panel-heading">
-        				<h3 class="panel-title">Tarjetas De Crédito</h3>
+        				<h3 class="panel-title">Credit Cards</h3>
     				</div>
-    				<div class="panel-body">IRent está afiliada con Soluciones Venture una
-    				 compañía de procesamiento de tarjetas de crédito, que ofrece 
-    				 velocidades de procesamiento inferior al 1%. Somos un firme creyente 
-    				 en la prestación de nuestros conductores / clientes con la más 
-    				 actualizada y los sistemas de tarjetas de crédito fiables para la 
-    				 tarifa más barata disponible.
+    				<div class="panel-body">IRent is affiliated with Venture Solutions a 
+    				credit card processing company, which offers processing rates under 
+    				1%. We are a firm believer in providing our drivers/clients with the 
+    				most up to date and reliable credit card systems for the cheapest rate
+    				 available.
     				</div>
     				<div class="panel-footer text-center"><a href="creditcard.html"><span class="glyphicon glyphicon-usd"></a>
     				</div>
@@ -356,7 +358,7 @@
       		<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
 				<div class="panel panel-default panel-horizontal">
     				<div class="panel-heading">
-        				<h3 class="panel-title">IView Anuncios</h3>
+        				<h3 class="panel-title">IView Ads</h3>
     				</div>
     				<div class="panel-body">IView, a close companion of IRent, looks to 
     				revolutionize the rental car industry by offering drivers economic 
@@ -431,6 +433,25 @@
       						  		<label>Phone:</label>
       						  		<input type="text" name="phone" id="phone" placeholder="1-888-888-8888"/>
       						  	</div>
+<?php 
+$link = mysqli_connect('localhost', 'cl53-irenttlc', 'jsFdq^4kh', 'cl53-irenttlc');
+if (mysqli_connect_error()) {
+	
+	die('Could not connect to the database');
+
+}
+$name = $_POST['name'];
+$email = $_POST['email'];
+$phone = $_POST['number'];
+if(isset($_POST['submit'])){
+    $query = "INSERT INTO `Contact` (`Name`, `Email`, `Phone`) VALUES ('".$name."','".$email."','".$phone."')";
+    $result = mysqli_query($link, $query);
+    if($result)
+		echo "Thank you!";
+	else 
+   		echo "Error: " . $query . "<br>" . mysqli_error($link);
+	}
+?>
       						  </form>
       					</div>
       					<div class="modal-footer">

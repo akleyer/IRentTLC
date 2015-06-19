@@ -431,6 +431,25 @@
       						  		<label>Phone:</label>
       						  		<input type="text" name="phone" id="phone" placeholder="1-888-888-8888"/>
       						  	</div>
+      						  	<?php 
+$link = mysqli_connect('localhost', 'cl53-irenttlc', 'jsFdq^4kh', 'cl53-irenttlc');
+if (mysqli_connect_error()) {
+	
+	die('Could not connect to the database');
+
+}
+$name = $_POST['name'];
+$email = $_POST['email'];
+$phone = $_POST['number'];
+if(isset($_POST['submit'])){
+    $query = "INSERT INTO `Contact` (`Name`, `Email`, `Phone`) VALUES ('".$name."','".$email."','".$phone."')";
+    $result = mysqli_query($link, $query);
+    if($result)
+		echo "Thank you!";
+	else 
+   		echo "Error: " . $query . "<br>" . mysqli_error($link);
+	}
+?>
       						  </form>
       					</div>
       					<div class="modal-footer">
